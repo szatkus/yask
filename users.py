@@ -1,3 +1,6 @@
+import config
+
+from hashlib import pbkdf2_hmac
 from sqlalchemy import Column, Enum, LargeBinary, String
 
 from database import Base
@@ -13,3 +16,7 @@ class User(Base):
     @property
     def password(self):
         return self._password
+
+    @password.setter
+    def password(self, value):
+        self._password = pbkdf2_hmac(config.PASSWORD_ALGORITHM, bytearray(value, 'utf-8'), config.PASSWORD_SALT, config.PASSWORD_ITERATIONS)

@@ -1,8 +1,10 @@
 import config
+import registration
+__all__ = [registration]
 
-from flask import Flask, request, send_from_directory, render_template
+from flask import send_from_directory, render_template
 
-app = Flask(__name__)
+from app import app
 
 @app.route('/')
 def root():

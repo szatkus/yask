@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+    {% if not result %}
+    <form action="/register" method="POST">
+        <label>Nazwa użytkownika:</label>
+        <input name="username"><br>
+        <label>E-mail:</label>
+        <input name="email"><br>
+        <label>Kod rejestracyjny:</label>
+        <input name="code"><br>
+        <input type="submit" value="rejestracja">
+    </form>
+    {% elif result == 'ok'%}
+    Wszystko spoko.
+    {% elif result == 'wrong_code'%}
+    Zły kod.
+    {% endif %}
+{% endblock %}
