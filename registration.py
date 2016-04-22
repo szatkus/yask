@@ -19,7 +19,6 @@ def generate_password():
 
 @app.route('/register', methods=['GET'])
 def register_view():
-    print(render_template('register.html'))
     return render_template('register.html')
 
 @app.route('/register', methods=['POST'])
