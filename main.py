@@ -10,12 +10,12 @@ def root():
 
 if config.DEVELOPMENT:
     @app.route('/css/<path:path>')
-    def send_css(path):
+    def send_css(path: str):
         return send_from_directory('css', path)
 
     @app.route('/images/<path:path>')
-    def send_image(path):
+    def send_image(path: str):
         return send_from_directory('images', path)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=config.DEVELOPMENT)
