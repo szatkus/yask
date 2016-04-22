@@ -10,5 +10,9 @@ def root():
 def send_css(path):
     return send_from_directory('css', path)
 
+@app.route('/images/<path:path>')
+def send_image(path):
+    return send_from_directory('images', path)
+
 if __name__ == "__main__":
     app.run(debug=True)

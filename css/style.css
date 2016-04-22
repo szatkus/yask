@@ -44,7 +44,60 @@ header .place {
     height: 40px;
     vertical-align: middle;
 }
+
+.channel-name {
+    text-transform: uppercase;
+}
+
 header .channel-name {
     color: #aaa;
-    font-size: 9px;
+    margin-right: 80px;
+}
+
+ul.entries {
+    list-style-type: none;
+    width: 600px;
+}
+
+ul.entries .thumbnail-container {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}
+
+ul.entries .thumbnail-container .helper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 64px;
+    height: 64px;
+}
+
+ul.entries .details {
+    display: inline-block;
+    height: 64px;
+    vertical-align: top;
+}
+
+ul.entries .title {
+    font-size: 18px;
+    color: #5ca;
+}
+
+ul.entries .title:visited {
+    color: #475;
+}
+
+ul.entries .channel-name {
+    color: #999;
+    font-size: 12px;
+}
+
+ul.entries .ok {
+    float: right;
+    height: 24px;
+    width: 24px;
+    margin: 20px;
+    background-color: #000;
+    color: #fff;
 }
