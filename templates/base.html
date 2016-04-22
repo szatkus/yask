@@ -7,9 +7,9 @@
 <header>
     <a href="/" class="logo" title="Musisz tylko mocno w nie uwierzyć!">[tu jest logo]
     </a><a href="#" class="channel-name">wszystkie
-    </a><a href="#" class="selected">Ważne
-    </a><a href="#">Wschodzące
-    </a><a href="#">Najnowsze</a>
+    </a><a href="#" {% if place == 'hot' %}class="selected"{% endif %}>Ważne
+    </a><a href="#" {% if place == 'trending' %}class="selected"{% endif %}>Wschodzące
+    </a><a href="#" {% if place == 'fresh' %}class="selected"{% endif %}>Najnowsze</a>
 </header>
 
 <main>

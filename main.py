@@ -8,7 +8,7 @@ from app import app
 
 @app.route('/')
 def root():
-    return render_template('index.html')
+    return render_template('index.html', place='hot')
 
 if config.DEVELOPMENT:
     @app.route('/css/<path:path>')
